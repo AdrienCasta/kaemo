@@ -1,0 +1,149 @@
+@import 'fonts.css';
+
+/*===============================
+Variables
+=================================*/
+
+@grey:#171717;
+@blue-dark:#2c4bdb;
+@white:#ddd;
+
+body{
+    background:@grey;
+    color:@white;
+    font-family: 'Open Sans', serif;
+}
+.wrapper{
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 0 20px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+     -webkit-flex-flow: row wrap;
+     -webkit-justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+header{
+    height: 150px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+     -webkit-justify-content: center;
+     -webkit-align-items: center;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size:5em;
+        font-family: 'hensaregular';
+    }
+}
+figure{
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    width: 32%;
+    height: auto;
+    margin: 0 0 20px;
+    padding: 0 0 5px;
+    border-radius: 4px;
+    background: @blue-dark;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+     -webkit-flex-flow: column nowrap;
+     -webkit-justify-content: space-between;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    &:hover{
+        img{
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 100%);   
+        }
+    }
+    figcaption{
+        padding: 0 10px;
+    }
+    ul{
+        margin: 10px 0 0;
+        padding: 0 10px;
+        li{
+            margin: 8px 0;
+            font-size: 0.9em;
+            span{
+                margin-right: 5px;
+            }
+        }
+    }
+    p{
+        padding: 0px 10px;
+    }
+}
+img{
+    width: 100%;
+     border-radius: 4px 4px 0 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: 0.3s cubic-bezier(.55,0,.1,1);
+}
+h2{
+    color:@white;
+    margin: 10px 0 0;
+    font-size: 2em;
+    font-weight: 800;
+}
+h3{
+    padding: 10px 0 0;
+    &:before{
+    vertical-align: middle;
+        display: inline-block;
+        content: '';
+        width: 20%;
+        height: 1px;
+        background:@white;
+        line-height: 100%;
+        margin-right: 20px;
+    }
+}
+
+/*===============================
+Media queries
+=================================*/
+
+@media screen and (max-width: 960px) {
+  figure{
+    width: 48%;
+      h2{
+            font-size: 1.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+  figure{
+    width: 100%;
+        ul{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            margin: 30px 0 0;
+            li{
+                span{
+
+                }
+            }
+        }
+    }
+}
