@@ -38,7 +38,6 @@ class IndexController extends Controller
             
             $i++;
         }
-        //dd(date("d/m/Y",strtotime($movie->release_date)));
         return view("movies",['movies' => $movies]);
     }
 }
